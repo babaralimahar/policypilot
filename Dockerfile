@@ -19,7 +19,7 @@ COPY config ./config
 COPY prompts ./prompts
 COPY data/corpus ./data/corpus
 COPY data/handbook_spec.yaml ./data/handbook_spec.yaml
-COPY alembic.ini ./
+COPY alembic.ini start.sh ./
 ENV PATH="/app/.venv/bin:$PATH" PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 USER app
 EXPOSE 8000
