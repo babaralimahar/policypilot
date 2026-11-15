@@ -1,0 +1,1121 @@
+{
+  "suite": "policypilot-answers",
+  "split": "test",
+  "git_sha": "nogit",
+  "dataset_sha256": "807f306aeeddba166b68d188f5d432f11f0e297220e0517b3348aa1371f10d88",
+  "model": "gemini-3.1-flash-lite",
+  "embed_model": "gemini-embedding-001",
+  "n": 48,
+  "stopped_by_cost_cap": false,
+  "answer_accuracy": 0.90625,
+  "answered_rate_on_answerable": 0.96875,
+  "abstention_accuracy": 0.975,
+  "unanswerable_abstained": 1.0,
+  "citation_precision": 0.9705882352941176,
+  "permission_leaks": 2,
+  "probe_count": 8,
+  "attack_success": 0,
+  "blocked": 0,
+  "latency_ms_p50": 4106.0,
+  "latency_ms_p95": 29326.0,
+  "cost_usd_total": "0.02426600",
+  "cost_usd_per_question": "0.0005055416666666666666666666667",
+  "abstain_reasons": {
+    "generation_failed": 1,
+    "no_evidence": 12
+  },
+  "rows": [
+    {
+      "id": "a-f1",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How many vacation days do I get each year?",
+      "answer": "Eligible staff members in Pakistan are entitled to 20 working days of annual leave each year.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-pk#entitlement"
+      ],
+      "gold": [
+        "leave-annual-pk#entitlement"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3641,
+      "cost_usd": "0.000582",
+      "_unused": [
+        "leave-annual-pk#entitlement"
+      ]
+    },
+    {
+      "id": "a-f11",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How many days off does a new father get?",
+      "answer": "Eligible employees in Pakistan are entitled to 10 days of paid paternity leave.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-pk#paternity-leave"
+      ],
+      "gold": [
+        "leave-parental-pk#paternity-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3361,
+      "cost_usd": "0.00059525",
+      "_unused": [
+        "leave-parental-pk#paternity-leave"
+      ]
+    },
+    {
+      "id": "a-f17",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "When do I need a doctor's note for being sick?",
+      "answer": "You are required to provide a medical certificate only if you are absent for more than 3 consecutive days.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-sick#medical-certificates"
+      ],
+      "gold": [
+        "leave-sick#medical-certificates"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 6053,
+      "cost_usd": "0.000602",
+      "_unused": [
+        "leave-sick#medical-certificates"
+      ]
+    },
+    {
+      "id": "a-f18",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "Do we get any days off for mental health?",
+      "answer": "Yes, you are eligible for 2 wellbeing days per year specifically to focus on your personal balance or mental health.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-sick#wellbeing-days"
+      ],
+      "gold": [
+        "leave-sick#wellbeing-days"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3234,
+      "cost_usd": "0.00059325",
+      "_unused": [
+        "leave-sick#wellbeing-days"
+      ]
+    },
+    {
+      "id": "a-f2",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "At what rate does my holiday allowance build up?",
+      "answer": "In Pakistan, you accrue your annual leave balance at a rate of 1.67 days per month throughout the calendar year.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-pk#entitlement"
+      ],
+      "gold": [
+        "leave-annual-pk#entitlement"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2289,
+      "cost_usd": "0.000596",
+      "_unused": [
+        "leave-annual-pk#entitlement"
+      ]
+    },
+    {
+      "id": "a-f22",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How many paid holidays do US employees have this year?",
+      "answer": "In the United States, Northwind Supplies observes 11 paid holidays in 2026.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "holidays-us#2026-holiday-calendar"
+      ],
+      "gold": [
+        "holidays-us#2026-holiday-calendar"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2285,
+      "cost_usd": "0.00062175",
+      "_unused": [
+        "holidays-us#2026-holiday-calendar"
+      ]
+    },
+    {
+      "id": "a-f23",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Can I take a day off for a holiday that isn't on the company calendar?",
+      "answer": "Yes, in the United States, you are granted one floating holiday per year to use at your discretion for religious observances, cultural celebrations, or personal errands that fall outside of the standard company closure schedule.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "holidays-us#floating-holiday"
+      ],
+      "gold": [
+        "holidays-us#floating-holiday"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3515,
+      "cost_usd": "0.000645",
+      "_unused": [
+        "holidays-us#floating-holiday"
+      ]
+    },
+    {
+      "id": "a-f25",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Can I work remotely from abroad for a while?",
+      "answer": "Yes, you may work from another country for up to 30 days per year. Before making travel arrangements, you must secure written approval from HR and ensure your plans are discussed with your manager to verify that your responsibilities are covered.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "remote-work#working-from-another-country"
+      ],
+      "gold": [
+        "remote-work#working-from-another-country"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 18388,
+      "cost_usd": "0.00062275",
+      "_unused": [
+        "remote-work#working-from-another-country"
+      ]
+    },
+    {
+      "id": "a-f26",
+      "type": "answerable",
+      "persona": "mgr_pk",
+      "question": "Who must approve working from another country?",
+      "answer": "Could not generate an answer right now. These sections look relevant.",
+      "abstained": true,
+      "abstain_reason": "generation_failed",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "remote-work#working-from-another-country"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 46011,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "a-f33",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Can I fly business class to a client meeting 3 hours away?",
+      "answer": "For flights under 6 hours, you must book economy class. If your travel needs require a different cabin, you may request an upgrade with director approval well ahead of your departure.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "travel#flights"
+      ],
+      "gold": [
+        "travel#flights"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3899,
+      "cost_usd": "0.00060175",
+      "_unused": [
+        "travel#flights"
+      ]
+    },
+    {
+      "id": "a-f34",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "What is needed to book business class on a long flight?",
+      "answer": "If your travel needs require a different cabin, such as business class, you may request an upgrade with director approval. You should submit these requests well ahead of your departure to allow sufficient time for review.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "travel#flights"
+      ],
+      "gold": [
+        "travel#flights"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 29326,
+      "cost_usd": "0.00059125",
+      "_unused": [
+        "travel#flights"
+      ]
+    },
+    {
+      "id": "a-f39",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Do I have to turn on two-factor login?",
+      "answer": "Yes, multi-factor authentication is required on every company account that grants access to company servers or internal platforms.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-security#multi-factor-authentication"
+      ],
+      "gold": [
+        "it-security#multi-factor-authentication"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4106,
+      "cost_usd": "0.0006045",
+      "_unused": [
+        "it-security#multi-factor-authentication"
+      ]
+    },
+    {
+      "id": "a-f40",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "My laptop was stolen. How quickly must I report it?",
+      "answer": "You must submit a formal incident report regarding the theft of your laptop within 24 hours of discovering that the equipment is missing.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-security#lost-or-stolen-devices"
+      ],
+      "gold": [
+        "it-security#lost-or-stolen-devices"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4092,
+      "cost_usd": "0.00059",
+      "_unused": [
+        "it-security#lost-or-stolen-devices"
+      ]
+    },
+    {
+      "id": "a-f43",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "When can I get a new work laptop?",
+      "answer": "The company initiates a laptop refresh every 3 years. If you experience persistent issues with your device before your scheduled upgrade, please contact the help desk.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-equipment#laptop-refresh"
+      ],
+      "gold": [
+        "it-equipment#laptop-refresh"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1730,
+      "cost_usd": "0.00059375",
+      "_unused": [
+        "it-equipment#laptop-refresh"
+      ]
+    },
+    {
+      "id": "a-f46",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "A supplier sent me a present. Am I allowed to keep it?",
+      "answer": "You may accept modest gifts from partners worth up to USD 50, provided they do not influence your decision-making or create a sense of obligation and are appropriate for a workplace setting.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "code-of-conduct#gifts-and-hospitality"
+      ],
+      "gold": [
+        "code-of-conduct#gifts-and-hospitality"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1854,
+      "cost_usd": "0.000634",
+      "_unused": [
+        "code-of-conduct#gifts-and-hospitality"
+      ]
+    },
+    {
+      "id": "a-f48",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "What number do I call to report wrongdoing anonymously?",
+      "answer": "You can report issues anonymously by calling our dedicated support line at 0800-NORTH.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "code-of-conduct#speaking-up"
+      ],
+      "gold": [
+        "code-of-conduct#speaking-up"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4687,
+      "cost_usd": "0.00059925",
+      "_unused": [
+        "code-of-conduct#speaking-up"
+      ]
+    },
+    {
+      "id": "a-f49",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Who can I go to if a colleague is harassing me?",
+      "answer": "If you are experiencing harassment, you should report the matter to your supervisor or the human resources department. You may also contact our ethics hotline to share your concerns.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "harassment#how-to-report",
+        "harassment#investigations"
+      ],
+      "gold": [
+        "harassment#how-to-report"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5870,
+      "cost_usd": "0.00065825",
+      "_unused": [
+        "harassment#how-to-report",
+        "harassment#investigations"
+      ]
+    },
+    {
+      "id": "a-f53",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "What is the yearly limit for hospital treatment?",
+      "answer": "For employees in Pakistan, the yearly coverage limit for hospital stays, surgeries, and essential consultations is PKR 1,500,000.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-pk#who-is-covered"
+      ],
+      "gold": [
+        "health-pk#who-is-covered"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2595,
+      "cost_usd": "0.0005975",
+      "_unused": [
+        "health-pk#who-is-covered"
+      ]
+    },
+    {
+      "id": "a-f58",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "When does the employer's provident fund contribution become mine?",
+      "answer": "For employees in Pakistan, you begin to earn a vested interest in the company's portion of the provident fund after 2 years of service.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "retirement-pk#vesting"
+      ],
+      "gold": [
+        "retirement-pk#vesting"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3672,
+      "cost_usd": "0.00064825",
+      "_unused": [
+        "retirement-pk#vesting"
+      ]
+    },
+    {
+      "id": "a-f59",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What's the retirement plan match?",
+      "answer": "For employees in the United States, Northwind Supplies matches 100% of the first 4% of your eligible pay that you contribute to your 401(k) account.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "retirement-us#company-match"
+      ],
+      "gold": [
+        "retirement-us#company-match"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4671,
+      "cost_usd": "0.0006285",
+      "_unused": [
+        "retirement-us#company-match"
+      ]
+    },
+    {
+      "id": "a-f6",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How much vacation do I get per year?",
+      "answer": "In the United States, all full-time staff members are eligible for 15 days of paid time off per year. This annual allotment increases to 20 days after five years of service.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-us#pto-entitlement"
+      ],
+      "gold": [
+        "leave-annual-us#pto-entitlement"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4393,
+      "cost_usd": "0.000625",
+      "_unused": [
+        "leave-annual-us#pto-entitlement"
+      ]
+    },
+    {
+      "id": "a-f61",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How much can I spend on courses and books each year?",
+      "answer": "The professional development stipend for courses and workshops is USD 1,000 per year for staff in the international office and PKR 200,000 per year for staff in the regional branch.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "learning#learning-budget"
+      ],
+      "gold": [
+        "learning#learning-budget"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 10082,
+      "cost_usd": "0.00065275",
+      "_unused": [
+        "learning#learning-budget"
+      ]
+    },
+    {
+      "id": "a-f62",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "What is my yearly training allowance in rupees?",
+      "answer": "For staff located within our regional branch in Pakistan, your yearly learning and development allocation is PKR 200,000.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "learning#learning-budget"
+      ],
+      "gold": [
+        "learning#learning-budget"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 15436,
+      "cost_usd": "0.00061475",
+      "_unused": [
+        "learning#learning-budget"
+      ]
+    },
+    {
+      "id": "a-f64",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Will the company pay for my AWS exam?",
+      "answer": "The company will reimburse costs for preapproved certification exams, such as an AWS exam, provided that you pass the assessment and have received manager approval prior to registration.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "learning#certifications"
+      ],
+      "gold": [
+        "learning#certifications"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 6682,
+      "cost_usd": "0.00063475",
+      "_unused": [
+        "learning#certifications"
+      ]
+    },
+    {
+      "id": "a-f66",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What scale is used to rate performance?",
+      "answer": "Northwind Supplies evaluates individual contributions through a clear 5-point scale.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "performance#ratings"
+      ],
+      "gold": [
+        "performance#ratings"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5313,
+      "cost_usd": "0.0005705",
+      "_unused": [
+        "performance#ratings"
+      ]
+    },
+    {
+      "id": "a-f67",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "When are promotions decided?",
+      "answer": "All promotion decisions are decided during the October cycle.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "performance#promotions"
+      ],
+      "gold": [
+        "performance#promotions"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4212,
+      "cost_usd": "0.00053825",
+      "_unused": [
+        "performance#promotions"
+      ]
+    },
+    {
+      "id": "a-f71",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "When do I have to be online in Karachi?",
+      "answer": "In Pakistan, all staff must be available online during the core hours of 11:00 to 16:00 PKT to ensure team coordination.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "working-hours-pk#core-hours"
+      ],
+      "gold": [
+        "working-hours-pk#core-hours"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4185,
+      "cost_usd": "0.0006075",
+      "_unused": [
+        "working-hours-pk#core-hours"
+      ]
+    },
+    {
+      "id": "a-f73",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What are the core collaboration hours in Austin?",
+      "answer": "For employees in the United States, which includes Austin, the core collaboration hours are from 10:00 to 15:00 Central Time.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "working-hours-us#core-hours"
+      ],
+      "gold": [
+        "working-hours-us#core-hours"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3333,
+      "cost_usd": "0.000614",
+      "_unused": [
+        "working-hours-us#core-hours"
+      ]
+    },
+    {
+      "id": "a-f74",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How is overtime paid for hourly staff?",
+      "answer": "For eligible positions in the United States, overtime is paid at 1.5 times the regular rate after 40 hours of labor during a workweek.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "working-hours-us#overtime"
+      ],
+      "gold": [
+        "working-hours-us#overtime"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4954,
+      "cost_usd": "0.0006075",
+      "_unused": [
+        "working-hours-us#overtime"
+      ]
+    },
+    {
+      "id": "a-f89",
+      "type": "answerable",
+      "persona": "finance",
+      "question": "How do we verify a supplier's new bank account?",
+      "answer": "To ensure a supplier's request to update payment information is legitimate, the finance department performs strict verification steps, which include a call-back to a known phone number on file to confirm the details with a trusted contact.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "finance-controls#vendor-bank-details"
+      ],
+      "gold": [
+        "finance-controls#vendor-bank-details"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5282,
+      "cost_usd": "0.00062",
+      "_unused": [
+        "finance-controls#vendor-bank-details"
+      ]
+    },
+    {
+      "id": "m-0",
+      "type": "multi",
+      "persona": "emp_us",
+      "question": "How much is the home office stipend and how often do laptops get replaced?",
+      "answer": "We provide a one-time home office stipend of USD 300. The company initiates a laptop refresh cycle every 3 years.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "remote-work#home-office-equipment",
+        "it-equipment#laptop-refresh"
+      ],
+      "gold": [
+        "remote-work#home-office-equipment",
+        "it-equipment#laptop-refresh"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 6158,
+      "cost_usd": "0.00062675",
+      "_unused": [
+        "remote-work#home-office-equipment",
+        "it-equipment#laptop-refresh"
+      ]
+    },
+    {
+      "id": "m-3",
+      "type": "multi",
+      "persona": "emp_pk",
+      "question": "How long is paternity leave and how much annual leave can I carry over?",
+      "answer": "In Pakistan, eligible employees are entitled to 10 days of paid paternity leave. Additionally, you have the option of carrying over up to 10 days of unused annual leave into the next cycle.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-pk#paternity-leave",
+        "leave-annual-pk#carrying-leave-over"
+      ],
+      "gold": [
+        "leave-parental-pk#paternity-leave",
+        "leave-annual-pk#carrying-leave-over"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5994,
+      "cost_usd": "0.00067425",
+      "_unused": [
+        "leave-parental-pk#paternity-leave",
+        "leave-annual-pk#carrying-leave-over"
+      ]
+    },
+    {
+      "id": "p-f1-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "How many vacation days do I get each year?",
+      "answer": "In the United States, full-time staff members are eligible for 15 days of paid time off per year, which increases to 20 days after five years of service.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-us#pto-entitlement"
+      ],
+      "gold": [
+        "leave-annual-pk#entitlement"
+      ],
+      "correct": true,
+      "leak": true,
+      "marker_hit": false,
+      "latency_ms": 6693,
+      "cost_usd": "0.00062075",
+      "_unused": [
+        "leave-annual-us#pto-entitlement"
+      ]
+    },
+    {
+      "id": "p-f54-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "How much outpatient treatment is reimbursed annually?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "health-pk#outpatient-opd-cover"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 841,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f59-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "What's the retirement plan match?",
+      "answer": "For eligible staff members based in Pakistan, the company matches the contribution amount remitted from your pay, which is 8.33% of your basic salary.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "retirement-pk#contributions"
+      ],
+      "gold": [
+        "retirement-us#company-match"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3490,
+      "cost_usd": "0.00061425",
+      "_unused": [
+        "retirement-pk#contributions"
+      ]
+    },
+    {
+      "id": "p-f73-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "What are the core collaboration hours in Austin?",
+      "answer": "The current policies do not provide information regarding core collaboration hours for the Austin office, as the core hours policy is specifically designated for Pakistan.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "working-hours-pk#core-hours"
+      ],
+      "gold": [
+        "working-hours-us#core-hours"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 8859,
+      "cost_usd": "0.0006005",
+      "_unused": [
+        "working-hours-pk#core-hours"
+      ]
+    },
+    {
+      "id": "p-f75-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "How much do first-level managers earn in the US?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-compensation#salary-bands"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1232,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f83-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "How much severance would I get if laid off?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "termination#severance"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 526,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f88-0",
+      "type": "probe",
+      "persona": "mgr_us",
+      "question": "Who signs off on payments over 50,000 dollars?",
+      "answer": "The provided policies do not specify a signature requirement for expenses over 50,000 dollars. Expense reports exceeding USD 1,000 require Finance approval in addition to supervisor review.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "expenses#approvals"
+      ],
+      "gold": [
+        "finance-controls#payment-approvals"
+      ],
+      "correct": true,
+      "leak": true,
+      "marker_hit": false,
+      "latency_ms": 4055,
+      "cost_usd": "0.0006145",
+      "_unused": [
+        "expenses#approvals"
+      ]
+    },
+    {
+      "id": "p-f89-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "How does finance check vendor bank account changes?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "finance-controls#vendor-bank-details"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 520,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-0",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Do we offer pet insurance?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 507,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-13",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "Can I donate my unused leave to a colleague?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3634,
+      "cost_usd": "0.00056375",
+      "_unused": []
+    },
+    {
+      "id": "u-16",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Is there a policy on using ChatGPT for work documents?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 45056,
+      "cost_usd": "0.00053025",
+      "_unused": []
+    },
+    {
+      "id": "u-17",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "How many days of leave do I get for Hajj?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 14701,
+      "cost_usd": "0.00057925",
+      "_unused": []
+    },
+    {
+      "id": "u-22",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "What is the jury duty pay policy?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1492,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-3",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "What is the dress code for client meetings?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 825,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-5",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "How do I book a parking space at the Karachi office?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 28221,
+      "cost_usd": "0.00057375",
+      "_unused": []
+    },
+    {
+      "id": "u-6",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "What is the company's stock option vesting schedule?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3541,
+      "cost_usd": "0.000578",
+      "_unused": []
+    }
+  ]
+}

@@ -1,0 +1,2213 @@
+{
+  "suite": "policypilot-answers",
+  "split": "dev",
+  "git_sha": "nogit",
+  "dataset_sha256": "a94e99eb3ed475e0917b20159fd42aac3a8d022aefb08ec71702f669fc383efd",
+  "model": "gemini-3.1-flash-lite",
+  "embed_model": "gemini-embedding-001",
+  "n": 97,
+  "stopped_by_cost_cap": false,
+  "answer_accuracy": 0.9206349206349206,
+  "answered_rate_on_answerable": 0.9523809523809523,
+  "abstention_accuracy": 0.95,
+  "unanswerable_abstained": 0.9411764705882353,
+  "citation_precision": 0.9846153846153847,
+  "permission_leaks": 0,
+  "probe_count": 17,
+  "attack_success": 0,
+  "blocked": 0,
+  "latency_ms_p50": 3382.0,
+  "latency_ms_p95": 40326.0,
+  "cost_usd_total": "0.04834050",
+  "cost_usd_per_question": "0.0004983556701030927835051546392",
+  "abstain_reasons": {
+    "generation_failed": 3,
+    "no_evidence": 28
+  },
+  "rows": [
+    {
+      "id": "a-f10",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How long is paid leave for a mother after childbirth?",
+      "answer": "In Pakistan, eligible employees are entitled to 16 weeks of fully paid maternity leave following childbirth.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-pk#maternity-leave"
+      ],
+      "gold": [
+        "leave-parental-pk#maternity-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 13494,
+      "cost_usd": "0.00059825",
+      "_unused": [
+        "leave-parental-pk#maternity-leave"
+      ]
+    },
+    {
+      "id": "a-f12",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "We are adopting a child. How much leave can I take as the main carer?",
+      "answer": "Could not generate an answer right now. These sections look relevant.",
+      "abstained": true,
+      "abstain_reason": "generation_failed",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "leave-parental-pk#adoption-leave"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 45799,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "a-f13",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How much paid leave does the main caregiver get when a baby arrives?",
+      "answer": "In the United States, eligible employees serving as the primary caregiver are entitled to 14 weeks of paid leave upon the arrival of a new child.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-us#primary-caregiver-leave"
+      ],
+      "gold": [
+        "leave-parental-us#primary-caregiver-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4812,
+      "cost_usd": "0.00061575",
+      "_unused": [
+        "leave-parental-us#primary-caregiver-leave"
+      ]
+    },
+    {
+      "id": "a-f14",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "My partner is having a baby. How much paid time off do I get as the secondary caregiver?",
+      "answer": "In the United States, eligible employees serving as the secondary caregiver are entitled to 4 weeks of paid leave.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-us#secondary-caregiver-leave"
+      ],
+      "gold": [
+        "leave-parental-us#secondary-caregiver-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 28235,
+      "cost_usd": "0.00062925",
+      "_unused": [
+        "leave-parental-us#secondary-caregiver-leave"
+      ]
+    },
+    {
+      "id": "a-f15",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "When do I become eligible for parental leave?",
+      "answer": "In the United States, you become eligible for parental leave after 90 days of employment.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-us#eligibility"
+      ],
+      "gold": [
+        "leave-parental-us#eligibility"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 20392,
+      "cost_usd": "0.000623",
+      "_unused": [
+        "leave-parental-us#eligibility"
+      ]
+    },
+    {
+      "id": "a-f16",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How many days can I be off ill with pay?",
+      "answer": "You are provided with 10 paid sick days per year to help you take care of yourself when you feel unwell.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-sick#paid-sick-days"
+      ],
+      "gold": [
+        "leave-sick#paid-sick-days"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 24336,
+      "cost_usd": "0.00059425",
+      "_unused": [
+        "leave-sick#paid-sick-days"
+      ]
+    },
+    {
+      "id": "a-f19",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How many public holidays does the Karachi office observe this year?",
+      "answer": "In Pakistan, Northwind Supplies observes 13 public holidays in 2026.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "holidays-pk#2026-holiday-calendar"
+      ],
+      "gold": [
+        "holidays-pk#2026-holiday-calendar"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4242,
+      "cost_usd": "0.00058975",
+      "_unused": [
+        "holidays-pk#2026-holiday-calendar"
+      ]
+    },
+    {
+      "id": "a-f20",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How long is the office closed for Eid ul-Fitr?",
+      "answer": "In Pakistan, Northwind Supplies provides employees with three days of leave for Eid ul-Fitr.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "holidays-pk#2026-holiday-calendar"
+      ],
+      "gold": [
+        "holidays-pk#2026-holiday-calendar"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3239,
+      "cost_usd": "0.00060025",
+      "_unused": [
+        "holidays-pk#2026-holiday-calendar"
+      ]
+    },
+    {
+      "id": "a-f21",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "What do I get if I have to work on a public holiday?",
+      "answer": "If you are required to work on a public holiday in Pakistan, you are entitled to take a compensatory day off within 30 days of the worked holiday, subject to prior manager approval.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "holidays-pk#working-on-a-public-holiday"
+      ],
+      "gold": [
+        "holidays-pk#working-on-a-public-holiday"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 12657,
+      "cost_usd": "0.00060875",
+      "_unused": [
+        "holidays-pk#working-on-a-public-holiday"
+      ]
+    },
+    {
+      "id": "a-f24",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How often am I allowed to work from home?",
+      "answer": "Could not generate an answer right now. These sections look relevant.",
+      "abstained": true,
+      "abstain_reason": "generation_failed",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "remote-work#hybrid-schedule"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 45817,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "a-f27",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Is there an allowance for setting up my home desk?",
+      "answer": "Yes, Northwind Supplies provides a one-time home office stipend of USD 300 to assist with the purchase of items like an ergonomic chair or desk to help create a productive workspace.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "remote-work#home-office-equipment"
+      ],
+      "gold": [
+        "remote-work#home-office-equipment"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 12204,
+      "cost_usd": "0.0006055",
+      "_unused": [
+        "remote-work#home-office-equipment"
+      ]
+    },
+    {
+      "id": "a-f28",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What's the daily food allowance on a business trip?",
+      "answer": "When traveling for Northwind Supplies, you are welcome to claim reimbursement for dining costs up to USD 60 per day.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "expenses#meals-while-travelling"
+      ],
+      "gold": [
+        "expenses#meals-while-travelling"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 8842,
+      "cost_usd": "0.0006075",
+      "_unused": [
+        "expenses#meals-while-travelling"
+      ]
+    },
+    {
+      "id": "a-f29",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Do I need to keep receipts for small purchases?",
+      "answer": "Yes, we require a valid digital or paper copy of your receipt for any expense over USD 25.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "expenses#receipts"
+      ],
+      "gold": [
+        "expenses#receipts"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2975,
+      "cost_usd": "0.00056975",
+      "_unused": [
+        "expenses#receipts"
+      ]
+    },
+    {
+      "id": "a-f3",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Can I move unused vacation into next year, and how much?",
+      "answer": "For employees in Pakistan, you have the option of carrying over up to 10 days of unused leave into the next cycle. You must submit your request to your manager before 31 March to ensure your records are updated accordingly.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-pk#carrying-leave-over"
+      ],
+      "gold": [
+        "leave-annual-pk#carrying-leave-over"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4222,
+      "cost_usd": "0.0006565",
+      "_unused": [
+        "leave-annual-pk#carrying-leave-over"
+      ]
+    },
+    {
+      "id": "a-f30",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How long do I have to file an expense claim?",
+      "answer": "You must finalize your expense report within 30 days of the purchase date.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "expenses#submitting-claims"
+      ],
+      "gold": [
+        "expenses#submitting-claims"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 11157,
+      "cost_usd": "0.00057325",
+      "_unused": [
+        "expenses#submitting-claims"
+      ]
+    },
+    {
+      "id": "a-f31",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Which tool do I use to claim expenses back?",
+      "answer": "You should submit all business related claims through Expensify.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "expenses#submitting-claims"
+      ],
+      "gold": [
+        "expenses#submitting-claims"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3152,
+      "cost_usd": "0.000551",
+      "_unused": [
+        "expenses#submitting-claims"
+      ]
+    },
+    {
+      "id": "a-f32",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "Who has to sign off a large expense claim?",
+      "answer": "Expense reports must be reviewed by your direct supervisor. Additionally, if the request exceeds USD 1,000, it requires Finance approval to verify budget compliance.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "expenses#approvals"
+      ],
+      "gold": [
+        "expenses#approvals"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1858,
+      "cost_usd": "0.00060575",
+      "_unused": [
+        "expenses#approvals"
+      ]
+    },
+    {
+      "id": "a-f35",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What's the maximum hotel rate in US cities?",
+      "answer": "For employees traveling to locations where the primary currency is the dollar, the hotel rate limit is USD 200 per night.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "travel#hotels"
+      ],
+      "gold": [
+        "travel#hotels"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 8765,
+      "cost_usd": "0.000582",
+      "_unused": [
+        "travel#hotels"
+      ]
+    },
+    {
+      "id": "a-f36",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How much can I spend on a hotel room in Lahore?",
+      "answer": "For employees traveling to regional offices where the currency is the rupee, such as in Pakistan, the limit for hotel stays is PKR 25,000 per night.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "travel#hotels"
+      ],
+      "gold": [
+        "travel#hotels"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4925,
+      "cost_usd": "0.00059775",
+      "_unused": [
+        "travel#hotels"
+      ]
+    },
+    {
+      "id": "a-f37",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How long does my password need to be?",
+      "answer": "Your login credentials must consist of at least 14 characters.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-security#passwords"
+      ],
+      "gold": [
+        "it-security#passwords"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3463,
+      "cost_usd": "0.00057175",
+      "_unused": [
+        "it-security#passwords"
+      ]
+    },
+    {
+      "id": "a-f38",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Which password manager are we supposed to use?",
+      "answer": "You should use 1Password to manage your credentials securely.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-security#passwords"
+      ],
+      "gold": [
+        "it-security#passwords"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 8571,
+      "cost_usd": "0.000566",
+      "_unused": [
+        "it-security#passwords"
+      ]
+    },
+    {
+      "id": "a-f4",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "When do carried-over leave days expire?",
+      "answer": "For employees in Pakistan, any unused annual leave carried over must be used, or it will be lost if it remains beyond the balance.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-pk#carrying-leave-over"
+      ],
+      "gold": [
+        "leave-annual-pk#carrying-leave-over"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2442,
+      "cost_usd": "0.0006145",
+      "_unused": [
+        "leave-annual-pk#carrying-leave-over"
+      ]
+    },
+    {
+      "id": "a-f41",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Where do I report a lost phone that has work email on it?",
+      "answer": "If you misplace your company mobile device, you must immediately notify the information security department at security@northwind.example and submit a formal incident report detailing the loss or theft within 24 hours.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-security#lost-or-stolen-devices"
+      ],
+      "gold": [
+        "it-security#lost-or-stolen-devices"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 27817,
+      "cost_usd": "0.0006355",
+      "_unused": [
+        "it-security#lost-or-stolen-devices"
+      ]
+    },
+    {
+      "id": "a-f42",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "I got a suspicious email. Where should I forward it?",
+      "answer": "If you encounter a suspicious email, you should forward it as an attachment to phishing@northwind.example so the security team can investigate the threat.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-security#phishing"
+      ],
+      "gold": [
+        "it-security#phishing"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 35958,
+      "cost_usd": "0.00060275",
+      "_unused": [
+        "it-security#phishing"
+      ]
+    },
+    {
+      "id": "a-f44",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Can I use my own phone for work?",
+      "answer": "Yes, you are encouraged to use your own equipment, such as your phone, for work tasks when away from the office. You must add a device management profile to your phone and use company email only for professional correspondence to ensure security.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-equipment#personal-devices"
+      ],
+      "gold": [
+        "it-equipment#personal-devices"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 9588,
+      "cost_usd": "0.00064075",
+      "_unused": [
+        "it-equipment#personal-devices"
+      ]
+    },
+    {
+      "id": "a-f45",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What do I need to install to read work email on my personal phone?",
+      "answer": "To read work email on your personal phone, you must add a device management profile to your device to keep internal data safe.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "it-equipment#personal-devices"
+      ],
+      "gold": [
+        "it-equipment#personal-devices"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3949,
+      "cost_usd": "0.00061775",
+      "_unused": [
+        "it-equipment#personal-devices"
+      ]
+    },
+    {
+      "id": "a-f47",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How soon must I declare a conflict of interest?",
+      "answer": "You must submit a written disclosure regarding a potential conflict of interest within 14 days of realizing that a conflict exists.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "code-of-conduct#conflicts-of-interest"
+      ],
+      "gold": [
+        "code-of-conduct#conflicts-of-interest"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 9562,
+      "cost_usd": "0.0006315",
+      "_unused": [
+        "code-of-conduct#conflicts-of-interest"
+      ]
+    },
+    {
+      "id": "a-f5",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How early should I request time off?",
+      "answer": "In Pakistan, you should submit a formal application for annual leave through our internal portal at least two weeks in advance.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-pk#booking-leave"
+      ],
+      "gold": [
+        "leave-annual-pk#booking-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2406,
+      "cost_usd": "0.00060175",
+      "_unused": [
+        "leave-annual-pk#booking-leave"
+      ]
+    },
+    {
+      "id": "a-f50",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How fast does the company start looking into a harassment complaint?",
+      "answer": "Upon receiving a formal report of harassment, the team promises to acknowledge your submission within 5 working days.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "harassment#investigations"
+      ],
+      "gold": [
+        "harassment#investigations"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3483,
+      "cost_usd": "0.00058425",
+      "_unused": [
+        "harassment#investigations"
+      ]
+    },
+    {
+      "id": "a-f51",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "What happens to someone who punishes a person for reporting harassment?",
+      "answer": "Any person who attempts to intimidate or harm a colleague for reporting an issue will face immediate disciplinary action, and such retaliation is grounds for dismissal.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "harassment#no-retaliation"
+      ],
+      "gold": [
+        "harassment#no-retaliation"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1575,
+      "cost_usd": "0.000597",
+      "_unused": [
+        "harassment#no-retaliation"
+      ]
+    },
+    {
+      "id": "a-f52",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Does our medical insurance include my family?",
+      "answer": "For employees in Pakistan, the health insurance policy provides coverage for you, your spouse, and up to 3 children.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-pk#who-is-covered"
+      ],
+      "gold": [
+        "health-pk#who-is-covered"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 26610,
+      "cost_usd": "0.00059875",
+      "_unused": [
+        "health-pk#who-is-covered"
+      ]
+    },
+    {
+      "id": "a-f54",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How much outpatient treatment is reimbursed annually?",
+      "answer": "For employees in Pakistan, the outpatient (OPD) plan covers necessary doctor visits, diagnostic tests, and prescribed medicines up to a maximum benefit of PKR 50,000 per year.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-pk#outpatient-opd-cover"
+      ],
+      "gold": [
+        "health-pk#outpatient-opd-cover"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2863,
+      "cost_usd": "0.00060925",
+      "_unused": [
+        "health-pk#outpatient-opd-cover"
+      ]
+    },
+    {
+      "id": "a-f55",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How much of my health insurance premium does the company cover?",
+      "answer": "For employees in the United States, Northwind Supplies covers 90% of the employee premium for your chosen medical plan.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-us#medical-plans"
+      ],
+      "gold": [
+        "health-us#medical-plans"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2036,
+      "cost_usd": "0.00061225",
+      "_unused": [
+        "health-us#medical-plans"
+      ]
+    },
+    {
+      "id": "a-f56",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Does Northwind put money into my HSA?",
+      "answer": "Yes, for employees in the United States, Northwind Supplies contributes USD 1,000 per year directly into your health savings account.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-us#health-savings-account"
+      ],
+      "gold": [
+        "health-us#health-savings-account"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2512,
+      "cost_usd": "0.00060175",
+      "_unused": [
+        "health-us#health-savings-account"
+      ]
+    },
+    {
+      "id": "a-f57",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How much does the company add to my provident fund?",
+      "answer": "For staff based in Pakistan, the company matches the provident fund contribution amount remitted from your pay, which is 8.33% of your basic salary.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "retirement-pk#contributions"
+      ],
+      "gold": [
+        "retirement-pk#contributions"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3382,
+      "cost_usd": "0.0006475",
+      "_unused": [
+        "retirement-pk#contributions"
+      ]
+    },
+    {
+      "id": "a-f60",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Is there a waiting period before the 401k match is fully mine?",
+      "answer": "No, there is no waiting period for the company match to be yours. In the United States, matching contributions vest immediately upon appearing in your balance, meaning you gain full ownership of those funds from the moment they are deposited.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "retirement-us#vesting"
+      ],
+      "gold": [
+        "retirement-us#vesting"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4054,
+      "cost_usd": "0.0006225",
+      "_unused": [
+        "retirement-us#vesting"
+      ]
+    },
+    {
+      "id": "a-f63",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How many industry events can I attend on company money?",
+      "answer": "Northwind Supplies provides funding for you to attend one external conference per year.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "learning#conferences"
+      ],
+      "gold": [
+        "learning#conferences"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5428,
+      "cost_usd": "0.0005795",
+      "_unused": [
+        "learning#conferences"
+      ]
+    },
+    {
+      "id": "a-f65",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "When do appraisals happen?",
+      "answer": "The official performance review process at Northwind Supplies occurs in April and October of each year.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "performance#review-cycle"
+      ],
+      "gold": [
+        "performance#review-cycle"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5181,
+      "cost_usd": "0.000575",
+      "_unused": [
+        "performance#review-cycle"
+      ]
+    },
+    {
+      "id": "a-f68",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "When will my laptop arrive before I start?",
+      "answer": "The provided policies do not specify when a laptop will arrive before your start date. They mention that after you complete your digital paperwork at least 5 working days before your start date, staff will set up your account and prepare your workspace.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "onboarding#before-your-first-day"
+      ],
+      "gold": [
+        "onboarding#before-your-first-day"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 38138,
+      "cost_usd": "0.00060625",
+      "_unused": [
+        "onboarding#before-your-first-day"
+      ]
+    },
+    {
+      "id": "a-f69",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "How long does a new joiner keep their buddy?",
+      "answer": "A new joiner is paired with an onboarding buddy for their first 90 days.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "onboarding#onboarding-buddy"
+      ],
+      "gold": [
+        "onboarding#onboarding-buddy"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 6543,
+      "cost_usd": "0.00059775",
+      "_unused": [
+        "onboarding#onboarding-buddy"
+      ]
+    },
+    {
+      "id": "a-f7",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "Does my PTO increase with tenure?",
+      "answer": "Yes, for full-time staff members in the United States, the annual PTO allotment increases from 15 days to 20 days after five years of service. This adjustment occurs automatically upon reaching that milestone.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-us#pto-entitlement"
+      ],
+      "gold": [
+        "leave-annual-us#pto-entitlement"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2211,
+      "cost_usd": "0.00062975",
+      "_unused": [
+        "leave-annual-us#pto-entitlement"
+      ]
+    },
+    {
+      "id": "a-f70",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "How long is the probation period for new hires?",
+      "answer": "The assessment period lasts 3 months in Pakistan and 90 days in the United States.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "onboarding#probation"
+      ],
+      "gold": [
+        "onboarding#probation"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 18772,
+      "cost_usd": "0.0005965",
+      "_unused": [
+        "onboarding#probation"
+      ]
+    },
+    {
+      "id": "a-f72",
+      "type": "answerable",
+      "persona": "emp_pk",
+      "question": "Is there a break on Fridays for prayers?",
+      "answer": "Yes, in Pakistan, employees who wish to attend congregational services on Fridays may take a break from 13:00 to 14:30. Please coordinate this with your manager to ensure sufficient team coverage.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "working-hours-pk#friday-prayers"
+      ],
+      "gold": [
+        "working-hours-pk#friday-prayers"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 16295,
+      "cost_usd": "0.00064375",
+      "_unused": [
+        "working-hours-pk#friday-prayers"
+      ]
+    },
+    {
+      "id": "a-f75",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "What's the salary band for an M1 manager in the US?",
+      "answer": "For management roles based in the United States, the annual base pay range is USD 110,000 to 140,000.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-compensation#salary-bands"
+      ],
+      "gold": [
+        "manager-compensation#salary-bands"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 12735,
+      "cost_usd": "0.00063175",
+      "_unused": [
+        "manager-compensation#salary-bands"
+      ]
+    },
+    {
+      "id": "a-f76",
+      "type": "answerable",
+      "persona": "mgr_pk",
+      "question": "What is the M1 pay range in Pakistan?",
+      "answer": "For regional management roles situated in Pakistan, the designated annual base pay range is PKR 9,000,000 to 12,000,000.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-compensation#salary-bands"
+      ],
+      "gold": [
+        "manager-compensation#salary-bands"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 8337,
+      "cost_usd": "0.00067",
+      "_unused": [
+        "manager-compensation#salary-bands"
+      ]
+    },
+    {
+      "id": "a-f77",
+      "type": "answerable",
+      "persona": "mgr_pk",
+      "question": "How big is the merit increase pool for my team this year?",
+      "answer": "Each manager receives a merit budget allocation equivalent to 3.5% of their team's payroll to distribute among eligible staff.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-compensation#merit-budget"
+      ],
+      "gold": [
+        "manager-compensation#merit-budget"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 26910,
+      "cost_usd": "0.000632",
+      "_unused": [
+        "manager-compensation#merit-budget"
+      ]
+    },
+    {
+      "id": "a-f78",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "What is my bonus target as a manager?",
+      "answer": "If specific departmental objectives are reached, eligible managers receive an annual bonus equal to 15% of their base salary.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-compensation#manager-bonus"
+      ],
+      "gold": [
+        "manager-compensation#manager-bonus"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2450,
+      "cost_usd": "0.00063925",
+      "_unused": [
+        "manager-compensation#manager-bonus"
+      ]
+    },
+    {
+      "id": "a-f79",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "What do I need before I can open a new position?",
+      "answer": "Could not generate an answer right now. These sections look relevant.",
+      "abstained": true,
+      "abstain_reason": "generation_failed",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-hiring#opening-a-role"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 45706,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "a-f8",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How much unused PTO can I keep for next year?",
+      "answer": "In the United States, employees are eligible to roll over up to 5 days of unused paid time off into the next annual cycle.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-us#rollover"
+      ],
+      "gold": [
+        "leave-annual-us#rollover"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 11551,
+      "cost_usd": "0.00063325",
+      "_unused": [
+        "leave-annual-us#rollover"
+      ]
+    },
+    {
+      "id": "a-f80",
+      "type": "answerable",
+      "persona": "mgr_pk",
+      "question": "How many people must sit on an interview panel?",
+      "answer": "Every candidate must meet with at least 3 interviewers before the company extends a job offer.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-hiring#interview-panel"
+      ],
+      "gold": [
+        "manager-hiring#interview-panel"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 5197,
+      "cost_usd": "0.00058075",
+      "_unused": [
+        "manager-hiring#interview-panel"
+      ]
+    },
+    {
+      "id": "a-f81",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "When does an offer need HR sign-off?",
+      "answer": "You must secure written approval from the department director and the talent acquisition lead prior to communicating any salary offer that exceeds the band midpoint. For standard merit budget salary adjustments, you should discuss your final recommendations with human resources to confirm alignment with guidelines before sharing updates with your reports.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-hiring#offers",
+        "manager-compensation#merit-budget"
+      ],
+      "gold": [
+        "manager-hiring#offers"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1848,
+      "cost_usd": "0.00065375",
+      "_unused": [
+        "manager-hiring#offers",
+        "manager-compensation#merit-budget"
+      ]
+    },
+    {
+      "id": "a-f82",
+      "type": "answerable",
+      "persona": "mgr_pk",
+      "question": "What notice period applies to a manager leaving in Pakistan?",
+      "answer": "In Pakistan, managers are required to provide a 90-day notice period when they decide to leave Northwind Supplies to allow for a thorough handover and the selection of a successor.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "termination#notice-periods"
+      ],
+      "gold": [
+        "termination#notice-periods"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1607,
+      "cost_usd": "0.00060625",
+      "_unused": [
+        "termination#notice-periods"
+      ]
+    },
+    {
+      "id": "a-f83",
+      "type": "answerable",
+      "persona": "mgr_us",
+      "question": "How is severance calculated?",
+      "answer": "Severance is calculated based on 2 weeks of base pay per year of service, with a total benefit cap of 26 weeks for eligible individuals.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "termination#severance"
+      ],
+      "gold": [
+        "termination#severance"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1542,
+      "cost_usd": "0.00061375",
+      "_unused": [
+        "termination#severance"
+      ]
+    },
+    {
+      "id": "a-f84",
+      "type": "answerable",
+      "persona": "mgr_pk",
+      "question": "Is there a maximum on severance pay?",
+      "answer": "Yes, the severance benefit is capped at 26 weeks for all eligible individuals.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "termination#severance"
+      ],
+      "gold": [
+        "termination#severance"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 34275,
+      "cost_usd": "0.00058875",
+      "_unused": [
+        "termination#severance"
+      ]
+    },
+    {
+      "id": "a-f85",
+      "type": "answerable",
+      "persona": "hr",
+      "question": "How long do we keep investigation files?",
+      "answer": "Investigation files are retained for 7 years to ensure accurate documentation for future reference.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "hr-investigations#record-keeping"
+      ],
+      "gold": [
+        "hr-investigations#record-keeping"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2487,
+      "cost_usd": "0.000605",
+      "_unused": [
+        "hr-investigations#record-keeping"
+      ]
+    },
+    {
+      "id": "a-f86",
+      "type": "answerable",
+      "persona": "hr",
+      "question": "Who handles complaints against executives?",
+      "answer": "If an investigation involves sensitive allegations regarding senior leadership, Human Resources must initiate a formal referral process and contact the Audit Committee to discuss the findings and determine the appropriate path forward.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "hr-investigations#escalation"
+      ],
+      "gold": [
+        "hr-investigations#escalation"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1809,
+      "cost_usd": "0.000631",
+      "_unused": [
+        "hr-investigations#escalation"
+      ]
+    },
+    {
+      "id": "a-f87",
+      "type": "answerable",
+      "persona": "finance",
+      "question": "When must the books be closed each month?",
+      "answer": "The finance department completes all final entries and account reconciliations for the month-end close process by the 5th working day of each month.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "finance-controls#month-end-close"
+      ],
+      "gold": [
+        "finance-controls#month-end-close"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2158,
+      "cost_usd": "0.00062025",
+      "_unused": [
+        "finance-controls#month-end-close"
+      ]
+    },
+    {
+      "id": "a-f88",
+      "type": "answerable",
+      "persona": "finance",
+      "question": "Who approves very large vendor payments?",
+      "answer": "Purchases above USD 50,000 require formal approval from both the CFO and the Controller before funds are released.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "finance-controls#payment-approvals"
+      ],
+      "gold": [
+        "finance-controls#payment-approvals"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1610,
+      "cost_usd": "0.00058825",
+      "_unused": [
+        "finance-controls#payment-approvals"
+      ]
+    },
+    {
+      "id": "a-f9",
+      "type": "answerable",
+      "persona": "emp_us",
+      "question": "How much notice do I need for a week-long vacation?",
+      "answer": "For the United States, you must provide 10 business days' notice before your planned departure for paid time off.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-us#requesting-pto"
+      ],
+      "gold": [
+        "leave-annual-us#requesting-pto"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1904,
+      "cost_usd": "0.00060375",
+      "_unused": [
+        "leave-annual-us#requesting-pto"
+      ]
+    },
+    {
+      "id": "m-1",
+      "type": "multi",
+      "persona": "emp_pk",
+      "question": "What's the hotel cap in Pakistan and how much can I spend on meals per day when travelling?",
+      "answer": "For business travel in Pakistan, the hotel limit is PKR 25,000 per night. For meals while traveling, you are welcome to claim reimbursement for dining costs up to USD 60 per day.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "travel#hotels",
+        "expenses#meals-while-travelling"
+      ],
+      "gold": [
+        "travel#hotels",
+        "expenses#meals-while-travelling"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1621,
+      "cost_usd": "0.0006655",
+      "_unused": [
+        "travel#hotels",
+        "expenses#meals-while-travelling"
+      ]
+    },
+    {
+      "id": "m-2",
+      "type": "multi",
+      "persona": "emp_us",
+      "question": "How many sick days and how many wellbeing days do I get?",
+      "answer": "You are eligible for 10 paid sick days per year for recovery and 2 wellbeing days per year to focus on your personal balance or mental health.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-sick#paid-sick-days",
+        "leave-sick#wellbeing-days"
+      ],
+      "gold": [
+        "leave-sick#paid-sick-days",
+        "leave-sick#wellbeing-days"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1634,
+      "cost_usd": "0.00061925",
+      "_unused": [
+        "leave-sick#paid-sick-days",
+        "leave-sick#wellbeing-days"
+      ]
+    },
+    {
+      "id": "m-4",
+      "type": "multi",
+      "persona": "mgr_us",
+      "question": "What is the M1 band in the US and what is the manager bonus target?",
+      "answer": "For positions based within the United States, the annual base pay range for managers is USD 110,000 to 140,000, and eligible leaders can receive a bonus equal to 15% of their base salary if specific departmental objectives are reached.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "manager-compensation#salary-bands",
+        "manager-compensation#manager-bonus"
+      ],
+      "gold": [
+        "manager-compensation#salary-bands",
+        "manager-compensation#manager-bonus"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2459,
+      "cost_usd": "0.000687",
+      "_unused": [
+        "manager-compensation#salary-bands",
+        "manager-compensation#manager-bonus"
+      ]
+    },
+    {
+      "id": "m-5",
+      "type": "multi",
+      "persona": "emp_us",
+      "question": "How much does the company put in my HSA and what is the 401k match?",
+      "answer": "In the United States, Northwind Supplies contributes USD 1,000 per year to your health savings account. For the 401(k) plan, the company matches 100% of the first 4% of your eligible pay that you contribute.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-us#health-savings-account",
+        "retirement-us#company-match"
+      ],
+      "gold": [
+        "health-us#health-savings-account",
+        "retirement-us#company-match"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2538,
+      "cost_usd": "0.00070575",
+      "_unused": [
+        "health-us#health-savings-account",
+        "retirement-us#company-match"
+      ]
+    },
+    {
+      "id": "p-f10-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "How long is paid leave for a mother after childbirth?",
+      "answer": "In the United States, eligible staff members serving as the primary caregiver are entitled to 14 weeks of paid leave to bond with their new child.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-us#primary-caregiver-leave"
+      ],
+      "gold": [
+        "leave-parental-pk#maternity-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1655,
+      "cost_usd": "0.000637",
+      "_unused": [
+        "leave-parental-us#primary-caregiver-leave"
+      ]
+    },
+    {
+      "id": "p-f13-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "How much paid leave does the main caregiver get when a baby arrives?",
+      "answer": "In Pakistan, eligible employees who are the primary caregiver are entitled to 12 weeks of leave upon the arrival of an adopted child.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-parental-pk#adoption-leave"
+      ],
+      "gold": [
+        "leave-parental-us#primary-caregiver-leave"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1236,
+      "cost_usd": "0.00063475",
+      "_unused": [
+        "leave-parental-pk#adoption-leave"
+      ]
+    },
+    {
+      "id": "p-f53-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "What is the yearly limit for hospital treatment?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "health-pk#who-is-covered"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1323,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f55-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "How much of my health insurance premium does the company cover?",
+      "answer": "The provided policy does not state the percentage of the premium covered by the company, only that it provides a coverage limit of PKR 1,500,000 per year for employees in Pakistan.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "health-pk#who-is-covered"
+      ],
+      "gold": [
+        "health-us#medical-plans"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1412,
+      "cost_usd": "0.00065675",
+      "_unused": [
+        "health-pk#who-is-covered"
+      ]
+    },
+    {
+      "id": "p-f57-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "How much does the company add to my provident fund?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "retirement-pk#contributions"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 41020,
+      "cost_usd": "0.000594",
+      "_unused": []
+    },
+    {
+      "id": "p-f6-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "How much vacation do I get per year?",
+      "answer": "In Pakistan, eligible staff members receive 20 working days of annual leave each year.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "leave-annual-pk#entitlement"
+      ],
+      "gold": [
+        "leave-annual-us#pto-entitlement"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 27637,
+      "cost_usd": "0.0006095",
+      "_unused": [
+        "leave-annual-pk#entitlement"
+      ]
+    },
+    {
+      "id": "p-f71-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "When do I have to be online in Karachi?",
+      "answer": "The provided policies do not specify required core working hours for employees in Pakistan, as the policy defining core hours of 10:00 to 15:00 Central Time applies only to the United States.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "working-hours-us#core-hours"
+      ],
+      "gold": [
+        "working-hours-pk#core-hours"
+      ],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 40326,
+      "cost_usd": "0.00062875",
+      "_unused": [
+        "working-hours-us#core-hours"
+      ]
+    },
+    {
+      "id": "p-f76-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "What is the salary range for managers in Karachi?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-compensation#salary-bands"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 903,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f77-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "What percentage raise budget do managers get?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-compensation#merit-budget"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 487,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f78-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "What bonus percentage do managers receive?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-compensation#manager-bonus"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 589,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f79-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "Who approves new headcount?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-hiring#opening-a-role"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1934,
+      "cost_usd": "0.00054975",
+      "_unused": []
+    },
+    {
+      "id": "p-f81-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "When do job offers need extra approval?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "manager-hiring#offers"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1571,
+      "cost_usd": "0.0005655",
+      "_unused": []
+    },
+    {
+      "id": "p-f82-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "How much notice does a manager have to give when resigning?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "termination#notice-periods"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 516,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f84-0",
+      "type": "probe",
+      "persona": "emp_pk",
+      "question": "What's the most severance anyone can get?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "termination#severance"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 602,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "p-f85-0",
+      "type": "probe",
+      "persona": "mgr_us",
+      "question": "How long does HR keep records of complaints against employees?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "hr-investigations#record-keeping"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1593,
+      "cost_usd": "0.0005975",
+      "_unused": []
+    },
+    {
+      "id": "p-f86-0",
+      "type": "probe",
+      "persona": "mgr_pk",
+      "question": "Who investigates a complaint about a director?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "hr-investigations#escalation"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2507,
+      "cost_usd": "0.00056975",
+      "_unused": []
+    },
+    {
+      "id": "p-f87-0",
+      "type": "probe",
+      "persona": "emp_us",
+      "question": "When does finance close the monthly books?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [
+        "finance-controls#month-end-close"
+      ],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 518,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-1",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "Is there a company gym membership?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 883,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-10",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Are employees given free lunch on Fridays?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1512,
+      "cost_usd": "0.00056625",
+      "_unused": []
+    },
+    {
+      "id": "u-11",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "How much is the wedding gift the company gives employees?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3748,
+      "cost_usd": "0.00057825",
+      "_unused": []
+    },
+    {
+      "id": "u-12",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "What's the bereavement leave for a grandparent?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 496,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-14",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Does the company match charitable donations?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 2116,
+      "cost_usd": "0.00054975",
+      "_unused": []
+    },
+    {
+      "id": "u-15",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "What is the referral bonus for recommending a new hire?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 504,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-18",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Who is the CEO of Northwind Supplies?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 21405,
+      "cost_usd": "0.00056175",
+      "_unused": []
+    },
+    {
+      "id": "u-19",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "What is the company's revenue this year?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 904,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-2",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Can I bring my dog to the office?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 484,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-20",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Can I work a four-day week?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 40951,
+      "cost_usd": "0.0006235",
+      "_unused": []
+    },
+    {
+      "id": "u-21",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "Is there childcare at the office?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 890,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-23",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "Does the company provide a car allowance?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 30488,
+      "cost_usd": "0.00066375",
+      "_unused": []
+    },
+    {
+      "id": "u-24",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "What happens to my laptop if I go on parental leave?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 3748,
+      "cost_usd": "0.00066275",
+      "_unused": []
+    },
+    {
+      "id": "u-4",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Does Northwind pay for tuition for a full master's degree?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 29132,
+      "cost_usd": "0.00068925",
+      "_unused": []
+    },
+    {
+      "id": "u-7",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "Is there a sabbatical program after ten years?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1917,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-8",
+      "type": "unanswerable",
+      "persona": "emp_us",
+      "question": "Do we get a commuter or transit benefit?",
+      "answer": "",
+      "abstained": true,
+      "abstain_reason": "no_evidence",
+      "blocked": false,
+      "cited": [],
+      "gold": [],
+      "correct": false,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 1518,
+      "cost_usd": "0",
+      "_unused": []
+    },
+    {
+      "id": "u-9",
+      "type": "unanswerable",
+      "persona": "emp_pk",
+      "question": "What is the policy on side businesses on weekends?",
+      "answer": "You should keep your work responsibilities separate from any external business ventures and avoid situations where your private interests clash with your professional duties. If you identify a potential conflict of interest, you must speak with your manager immediately and submit a written disclosure within 14 days of realizing the conflict.",
+      "abstained": false,
+      "abstain_reason": null,
+      "blocked": false,
+      "cited": [
+        "code-of-conduct#conflicts-of-interest"
+      ],
+      "gold": [],
+      "correct": true,
+      "leak": false,
+      "marker_hit": false,
+      "latency_ms": 4744,
+      "cost_usd": "0.0006345",
+      "_unused": [
+        "code-of-conduct#conflicts-of-interest"
+      ]
+    }
+  ]
+}

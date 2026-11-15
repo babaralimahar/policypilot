@@ -1,0 +1,8 @@
+{
+  "report": "policypilot-answers-test-20261115-153222-nogit.json",
+  "split": "test",
+  "detector": "leaks v2 (text)",
+  "flagged_v1": 2,
+  "flagged_v2": 0,
+  "flagged_v2_ids": []
+}

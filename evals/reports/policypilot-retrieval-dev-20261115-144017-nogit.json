@@ -1,0 +1,57 @@
+{
+  "suite": "policypilot-retrieval",
+  "split": "dev",
+  "git_sha": "nogit",
+  "dataset_sha256": "a94e99eb3ed475e0917b20159fd42aac3a8d022aefb08ec71702f669fc383efd",
+  "model": "gemini-3.1-flash-lite",
+  "embed_model": "gemini-embedding-001",
+  "n_scored": 63,
+  "n_queries": 97,
+  "modes": {
+    "lexical": {
+      "recall@1": 0.6031746031746031,
+      "recall@5": 0.8650793650793651,
+      "recall@10": 0.8968253968253969,
+      "recall@20": 0.9682539682539683,
+      "mrr": 0.7430487346453734,
+      "ndcg@10": 0.7731824222667233,
+      "latency_ms_p50": 29.45259999250993,
+      "latency_ms_p95": 35.97910000826232,
+      "rerank_cost_usd": "0"
+    },
+    "vector": {
+      "recall@1": 0.9365079365079365,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.9841269841269841,
+      "ndcg@10": 0.9882834842403637,
+      "latency_ms_p50": 547.7766999974847,
+      "latency_ms_p95": 824.7932000085711,
+      "rerank_cost_usd": "0"
+    },
+    "hybrid": {
+      "recall@1": 0.7777777777777778,
+      "recall@5": 0.9841269841269841,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.8833333333333333,
+      "ndcg@10": 0.9103859198410913,
+      "latency_ms_p50": 45.59510000399314,
+      "latency_ms_p95": 51.32910000975244,
+      "rerank_cost_usd": "0"
+    },
+    "hybrid+rerank": {
+      "recall@1": 0.9365079365079365,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.9814814814814815,
+      "ndcg@10": 0.9862052341836739,
+      "latency_ms_p50": 3672.6909000135493,
+      "latency_ms_p95": 35948.25769998715,
+      "rerank_cost_usd": "0.07914425"
+    }
+  },
+  "structural_leaks": 0
+}

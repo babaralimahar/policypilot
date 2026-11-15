@@ -1,0 +1,46 @@
+{
+  "suite": "policypilot-retrieval",
+  "split": "test",
+  "git_sha": "nogit",
+  "dataset_sha256": "807f306aeeddba166b68d188f5d432f11f0e297220e0517b3348aa1371f10d88",
+  "model": "gemini-3.1-flash-lite",
+  "embed_model": "gemini-embedding-001",
+  "n_scored": 32,
+  "n_queries": 48,
+  "modes": {
+    "lexical": {
+      "recall@1": 0.5625,
+      "recall@5": 0.90625,
+      "recall@10": 0.96875,
+      "recall@20": 1.0,
+      "mrr": 0.7342986874236874,
+      "ndcg@10": 0.7839358812919012,
+      "latency_ms_p50": 24.303100013639778,
+      "latency_ms_p95": 50.7594000082463,
+      "rerank_cost_usd": "0"
+    },
+    "vector": {
+      "recall@1": 0.90625,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.96875,
+      "ndcg@10": 0.9769331095982161,
+      "latency_ms_p50": 538.7258999980986,
+      "latency_ms_p95": 864.753700006986,
+      "rerank_cost_usd": "0"
+    },
+    "hybrid": {
+      "recall@1": 0.78125,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "mrr": 0.8958333333333334,
+      "ndcg@10": 0.920107493857313,
+      "latency_ms_p50": 44.91160000907257,
+      "latency_ms_p95": 64.26889999420382,
+      "rerank_cost_usd": "0"
+    }
+  },
+  "structural_leaks": 0
+}

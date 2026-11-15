@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Ask · PolicyPilot{% endblock %}
+{% block body %}
+<h1>Ask the Northwind handbook</h1>
+<p class="muted">Answers cite the policy sections they come from, and say so when the handbook doesn't cover something. You only ever see documents your groups allow: switch persona to compare.</p>
+
+<div class="panel" style="margin-bottom:16px">
+  <form method="post" action="/ui/persona" class="personas">
+    {% for name, groups in personas.items() %}
+    <button type="submit" name="persona" value="{{ name }}" class="{{ 'on' if name == persona else '' }}" title="{{ groups|join(', ') }}">{{ name }}</button>
+    {% endfor %}
+  </form>
+</div>
+
+{% if me %}
+<form class="panel" hx-post="/ui/ask" hx-target="#result" hx-swap="innerHTML" style="display:grid;gap:10px">
+  <label>Your question
+    <input name="question" required minlength="3" maxlength="1000" placeholder="How many vacation days do I get?" style="width:100%">
+  </label>
+  <div style="display:flex;gap:12px;align-items:end;flex-wrap:wrap">
+    <label>Retrieval
+      <select name="mode">
+        {% for m in ['vector', 'hybrid', 'lexical', 'hybrid+rerank'] %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
+      </select>
+    </label>
+    <button type="submit">Ask</button>
+    <span class="spin">thinking…</span>
+  </div>
+  <p class="muted" style="margin:0">Try: “What's the salary band for an M1 manager in the US?” as <b>emp_us</b>, then as <b>mgr_us</b>.</p>
+</form>
+<div id="result" style="margin-top:16px"></div>
+{% else %}
+<p class="note err">Pick a persona above to sign in (development tokens).</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+<div class="panel">
+  <p class="muted" style="margin-top:0">
+    <span class="tag">{{ r.mode }}</span>
+    {% if r.degraded %}<span class="tag">degraded: lexical only</span>{% endif %}
+    {% if r.cached %}<span class="tag">cached</span>{% endif %}
+    {{ r.latency_ms }} ms · ${{ r.cost_usd }}
+  </p>
+  {% if r.blocked %}
+    <p class="note err">The answer was withheld: it contained a link, address or request that is not allowed. The source may contain injected instructions; it has been logged.</p>
+  {% elif r.abstained and r.related %}
+    <p class="answer">{{ r.answer }}</p>
+    {% for c in r.related %}<div class="cite"><div class="t">Related: {{ c.doc_title }} › {{ c.section }}</div></div>{% endfor %}
+  {% elif r.abstained %}
+    <p class="answer">I couldn't find this in the policies you have access to{% if r.abstain_reason == 'conflicting' %} (the sources conflict){% endif %}. Try rephrasing, or ask People Ops.</p>
+  {% else %}
+    <p class="answer">{{ r.answer }}</p>
+  {% endif %}
+  {% for c in r.citations %}
+  <div class="cite">
+    <div class="t">{{ c.doc_title }} › {{ c.section }} <span class="s">v{{ c.version }} · <code>{{ c.chunk_id }}</code></span></div>
+    <div class="s">{{ c.snippet }}…</div>
+  </div>
+  {% endfor %}
+  <form hx-post="/ui/feedback" hx-swap="outerHTML" style="display:flex;gap:8px;margin-top:10px">
+    <input type="hidden" name="trace_id" value="{{ r.trace_id }}">
+    <button class="ghost" name="rating" value="1" type="submit">Helpful</button>
+    <button class="ghost" name="rating" value="-1" type="submit">Not helpful</button>
+  </form>
+</div>
