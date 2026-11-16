@@ -8,8 +8,11 @@ doesn't cover something, and never shows anyone a document their groups can't se
 > the prose was drafted by Gemini under automatic checks, and access groups are synthetic.
 > Real-world accuracy will differ.
 
-**Status: v1.0.0.** Built, tested and evaluated with a real model, with one held-out run. Not
-deployed yet.
+**Status: v1.0.0, deployed.** Built, tested and evaluated with a real model, with one held-out run.
+
+**Live demo:** https://policypilot-mqvp.onrender.com/ui (free hosting: the first visit after idling can
+take about a minute to wake up). Pick a persona, then ask a question. Each persona sees only its own
+groups' documents. The public demo never grants the admin role.
 
 ## Results
 

@@ -2,7 +2,8 @@
 
 Target: **Render free web service** (Docker) + **Neon Postgres** (pgvector), the same as P1.
 
-> Status: **not deployed yet.** All five projects get deployed together at the end.
+> Status: **live** at https://policypilot-mqvp.onrender.com (Render free, Singapore; Neon free
+> Postgres 17, Singapore). Handbook ingested from a local machine against Neon.
 
 ## Steps
 
