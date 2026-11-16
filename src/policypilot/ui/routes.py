@@ -14,7 +14,7 @@ from app.api.deps import SessionDep
 from app.api.errors import DomainError
 from policypilot.adapters.db.models import FeedbackRow, QaLogRow
 from policypilot.api.routes import answerer
-from policypilot.auth import issue_token, policy_settings, verify_token
+from policypilot.auth import issue_token, persona_access, policy_settings, verify_token
 from policypilot.services.answer import User
 
 templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
@@ -47,16 +47,16 @@ async def index(request: Request) -> HTMLResponse:
 async def persona(request: Request, persona: Annotated[str, Form()]) -> Response:
     s = policy_settings(request)
     personas = request.app.state.personas
-    if not s.dev_tokens or s.env == "prod" or persona not in personas:
+    roles = persona_access(s, personas.get(persona, []))
+    if roles is None or persona not in personas:
         return RedirectResponse("/ui", status_code=303)
-    roles = ["admin"] if "hr" in personas[persona] else []
     resp = RedirectResponse("/ui", status_code=303)
     resp.set_cookie(
         COOKIE,
         issue_token(s, f"demo-{persona}", personas[persona], roles),
         httponly=True,
         samesite="strict",
-        secure=False,  # dev tokens are refused in prod above
+        secure=s.env == "prod",
         max_age=s.jwt_ttl_s,
     )
     return resp

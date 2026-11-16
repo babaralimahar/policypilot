@@ -11,7 +11,7 @@ from sqlalchemy import func, select, text
 from app.api.deps import SessionDep
 from app.api.errors import DomainError
 from policypilot.adapters.db.models import FeedbackRow, QaLogRow
-from policypilot.auth import AdminDep, UserDep, issue_token, policy_settings
+from policypilot.auth import AdminDep, UserDep, issue_token, persona_access, policy_settings
 from policypilot.services.answer import Answerer
 from policypilot.services.ingest import embed_missing, ingest_markdown
 from policypilot.services.retrieval import retrieve
@@ -140,12 +140,12 @@ class TokenIn(BaseModel):
 async def dev_token(body: TokenIn, request: Request) -> dict[str, Any]:
     """Development only: a token for one of the demo personas. Disabled in production."""
     s = policy_settings(request)
-    if not s.dev_tokens or s.env == "prod":
-        raise DomainError(404, "not-found", "Not found")
     personas: dict[str, list[str]] = request.app.state.personas
+    if persona_access(s, []) is None:
+        raise DomainError(404, "not-found", "Not found")
     if body.persona not in personas:
         raise DomainError(422, "bad-persona", "Unknown persona", f"one of {sorted(personas)}")
-    roles = ["admin"] if "hr" in personas[body.persona] else []
+    roles = persona_access(s, personas[body.persona]) or []
     return {
         "token": issue_token(s, f"demo-{body.persona}", personas[body.persona], roles),
         "groups": personas[body.persona],

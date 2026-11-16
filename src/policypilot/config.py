@@ -39,6 +39,8 @@ class PolicySettings(Settings):
     jwt_audience: str = "policypilot"
     jwt_ttl_s: int = Field(8 * 3600, ge=60)
     dev_tokens: bool = True  # never enable in production
+    # Public demo on synthetic data: persona sign-in works in prod, but never grants admin.
+    demo_personas: bool = False
     log_salt: SecretStr = SecretStr("dev-salt")
 
 

@@ -74,3 +74,16 @@ async def admin_user(user: Annotated[User, Depends(current_user)]) -> User:
 
 UserDep = Annotated[User, Depends(current_user)]
 AdminDep = Annotated[User, Depends(admin_user)]
+
+
+def persona_access(s: PolicySettings, groups: list[str]) -> list[str] | None:
+    """Roles for a demo-persona sign-in, or None when persona sign-in is off.
+
+    Local dev: on, and the HR persona is an admin. Public demo (DEMO_PERSONAS in prod):
+    on, with no admin role for anyone.
+    """
+    if s.demo_personas:
+        return []
+    if s.dev_tokens and s.env != "prod":
+        return ["admin"] if "hr" in groups else []
+    return None

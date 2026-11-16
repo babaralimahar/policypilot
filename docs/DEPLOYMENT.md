@@ -30,10 +30,10 @@ Target: **Render free web service** (Docker) + **Neon Postgres** (pgvector), the
    | `JWT_SECRET` | 32+ random bytes |
    | `LOG_SALT` | random |
    | `WORKER_MODE` | `off` |
-   | `DEV_TOKENS` | `false` (or `true` only for a demo, with synthetic data) |
+   | `DEV_TOKENS` | `false` |
+   | `DEMO_PERSONAS` | `true` only for a public demo on synthetic data (persona sign-in, never admin) |
 
-5. **Verify.** `/readyz` should return 200. For the demo page (`/ui`), enable `DEV_TOKENS`
-   temporarily, because personas are dev tokens.
+5. **Verify.** `/readyz` should return 200. The demo page (`/ui`) needs `DEMO_PERSONAS=true`.
 
 ## Production notes
 

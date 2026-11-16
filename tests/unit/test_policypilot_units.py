@@ -221,3 +221,18 @@ def test_leak_detector_v2_cases_from_the_heldout_run() -> None:
         ["above USD 50,000 require both the CFO and the Controller"],
         "Who approves big payments?",
     )
+
+
+def test_persona_access_modes() -> None:
+    """Local dev: HR persona is admin. Public demo: sign-in works, admin never. Prod: off."""
+    from policypilot.auth import persona_access
+    from policypilot.config import PolicySettings
+
+    base = {"database_url": "postgresql+asyncpg://u:p@h/db"}
+    dev = PolicySettings(**base, env="dev", dev_tokens=True)  # type: ignore[arg-type]
+    assert persona_access(dev, ["hr"]) == ["admin"]
+    assert persona_access(dev, ["eng"]) == []
+    prod = PolicySettings(**base, env="prod", dev_tokens=True)  # type: ignore[arg-type]
+    assert persona_access(prod, ["hr"]) is None
+    demo = PolicySettings(**base, env="prod", dev_tokens=False, demo_personas=True)  # type: ignore[arg-type]
+    assert persona_access(demo, ["hr"]) == []
